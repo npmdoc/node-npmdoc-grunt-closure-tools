@@ -1,0 +1,1321 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/closureplease/grunt-closure-tools">grunt-closure-tools (v0.9.9)</a>
+</h1>
+<h4>Google Closure Library Tools for grunt, Compiler, DepsWriter, Builder.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools">module grunt-closure-tools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.grunt-closure-tools">
+            function <span class="apidocSignatureSpan"></span>grunt-closure-tools
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>builder</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>closureOpts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>depsWriter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.</span>helpers.log</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools.builder">module grunt-closure-tools.builder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.builder.createCommand">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>createCommand
+            <span class="apidocSignatureSpan">( options, fileObj )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.builder.validate">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>validate
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.builder.validateFileObj">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>validateFileObj
+            <span class="apidocSignatureSpan">( options, fileObj )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools.compiler">module grunt-closure-tools.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.compiler.compileCommand">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>compileCommand
+            <span class="apidocSignatureSpan">( options, fileObj )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.compiler.validateFile">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>validateFile
+            <span class="apidocSignatureSpan">( fileObj )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.compiler.validateOpts">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>validateOpts
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools.depsWriter">module grunt-closure-tools.depsWriter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.depsWriter.createCommand">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.depsWriter.</span>createCommand
+            <span class="apidocSignatureSpan">( options, fileObj )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.depsWriter.validate">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.depsWriter.</span>validate
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools.helpers">module grunt-closure-tools.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.executeCommand">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>executeCommand
+            <span class="apidocSignatureSpan">( command, done, optSilent, optExecOptions )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.fileExists">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>fileExists
+            <span class="apidocSignatureSpan">( filePath )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.generateStats">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>generateStats
+            <span class="apidocSignatureSpan">( filePath, fn )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.getWarn">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>getWarn
+            <span class="apidocSignatureSpan">( message )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.gzipSize">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>gzipSize
+            <span class="apidocSignatureSpan">( file, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.makeParam">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>makeParam
+            <span class="apidocSignatureSpan">(param, directive, optNoSpace, optParsePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.runCommands">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>runCommands
+            <span class="apidocSignatureSpan">( commands, cb, optSilent, optExecOptions )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.runStats">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>runStats
+            <span class="apidocSignatureSpan">( commands, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>log</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-closure-tools.helpers.log">module grunt-closure-tools.helpers.log</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.log.debug">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>debug
+            <span class="apidocSignatureSpan">(debug, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.log.error">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.log.info">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>info
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-closure-tools.helpers.log.warn">
+            function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>warn
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools" id="apidoc.module.grunt-closure-tools">module grunt-closure-tools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.grunt-closure-tools" id="apidoc.element.grunt-closure-tools.grunt-closure-tools">
+        function <span class="apidocSignatureSpan"></span>grunt-closure-tools
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-closure-tools = function (grunt) {
+
+  // register the rest of the tasks
+  cBuilder(grunt);
+  cCompiler(grunt);
+  cDepsWriter(grunt);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools.builder" id="apidoc.module.grunt-closure-tools.builder">module grunt-closure-tools.builder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.builder.createCommand" id="apidoc.element.grunt-closure-tools.builder.createCommand">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>createCommand
+        <span class="apidocSignatureSpan">( options, fileObj )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCommand( options, fileObj ) {
+
+  var canCompile = false;
+
+  // get python binary
+  var pythonBinary = options.pythonBinary || PYTHON_BINARY;
+
+  var cmd = pythonBinary + ' ';
+
+  // define the builder executable
+  var builder = options.builder || options.closureLibraryPath + BUILDER;
+  builder = gruntMod.template.process(builder);
+
+  cmd += builder + ' ';
+
+  // check for inputs
+  var inputs = options.inputs;
+  if (inputs &amp;&amp; inputs.length) {
+    cmd += cHelpers.makeParam( inputs, '-i', false, true);
+  }
+  // check for namespaces
+  if (options.namespaces &amp;&amp; options.namespaces.length) {
+    cmd += cHelpers.makeParam( options.namespaces, '-n' );
+  }
+  // append root
+  var allRoots = gruntMod.file.expand( fileObj.src );
+  cmd += cHelpers.makeParam( allRoots, '--root=', true, true);
+
+  // check type of operation
+  var op = options.output_mode || 'script';
+
+  // see if we have compiler set, will override any operation
+  if (options.compile) {
+    // we got something, check if file is there...
+    if ( !gruntMod.file.isFile( options.compilerFile ) ) {
+      cHelpers.log.error('ERROR'.red + ' :: compiler .jar location not valid: ' + (options.compilerFile || 'undefined').red);
+      return false;
+    }
+
+    // alright, we are compile on
+    canCompile = true;
+    op = 'compiled';
+  }
+
+  // set operation
+  cmd += ' -o ' + op;
+
+  // check if output file is defined
+  var dest = fileObj.dest;
+  if (dest &amp;&amp; dest.length) {
+    cmd += ' --output_file=' + gruntMod.template.process(dest);
+  }
+
+  // ---
+  // if compile mode, start digging
+  // ---
+  if (canCompile) {
+
+    var i;
+    var len;
+
+    cmd += ' --compiler_jar=' + options.compilerFile;
+
+    // dive into all options
+    var compileOpts = options.compilerOpts || {};
+    var jvmOpts = options.jvmOpts || {};
+
+    // define options that may contain files that need expanding
+    var expandDirectives = [
+      'externs'
+    ];
+
+    for( var directive in compileOpts ) {
+
+      // check for externs option and intercept with grunt file expand
+      if (0 &lt;= expandDirectives.indexOf( directive )) {
+        compileOpts[directive] = gruntMod.file.expand( compileOpts[directive] );
+      }
+
+      // check for type of value and act accordingly
+      if ( Array.isArray( compileOpts[directive] ) ) {
+
+        // go through all values
+        for (i = 0, len = compileOpts[directive].length; i &lt; len; i++) {
+          cmd += ' --compiler_flags="--' + directive + '=' + compileOpts[directive][i] + '"';
+        }
+      } else if (null === compileOpts[directive]) {
+
+        // value of directive is null, not required
+        cmd += ' --compiler_flags="--' + directive + '"';
+      } else {
+
+        // value of directive is a string
+        cmd += ' --compiler_flags="--' + directive + '=' + compileOpts[directive] + '"';
+      }
+
+    }
+
+    // check for type of value and act accordingly
+    if ( Array.isArray( jvmOpts ) ) {
+
+      // go through all values
+      for (i = 0, len = jvmOpts.length; i &lt; len; i++) {
+        cmd += ' --jvm_flags="' + jvmOpts[i] + '"';
+      }
+    } else if (typeof jvmOpts === 'string') {
+      // value of directive is a string
+      cmd += ' --jvm_flags="' + jvmOpts + '"';
+    }
+
+  }
+
+  return cmd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+  if ( !cBuilder.validateFileObj( options, fileObj )) {
+    grunt.log.error('FAILED validations for target: ' + targetName.red);
+    return;
+  }
+
+  cmd = cBuilder.<span class="apidocCodeKeywordSpan">createCommand</span>( options, fileObj );
+
+  if ( cmd ) {
+    commands.push( {cmd: cmd, dest: targetName, fileObj: fileObj} );
+  } else {
+    grunt.log.error( 'FAILED to create command line for target: ' + targetName.red );
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.builder.validate" id="apidoc.element.grunt-closure-tools.builder.validate">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>validate
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function ( options )
+{
+  // check for closure lib path
+  var libPath = options.closureLibraryPath;
+
+  var builder;
+  if (!libPath) {
+    // check for direct assignment of builder script
+    builder = options.builder;
+    if (!builder) {
+      cHelpers.log.error('closureLibraryPath'.red + ' or ' + 'builder'.red + ' properties are required');
+      return false;
+    }
+  } else {
+    builder = libPath + BUILDER;
+  }
+
+  builder = gruntMod.template.process(builder);
+
+  // ---
+  // validate builder existence
+  // ---
+  if (!gruntMod.file.isFile( builder )) {
+    cHelpers.log.error('builder file/path not valid: ' + builder.red);
+    return false;
+  }
+
+  // ---
+  // Check for inputs or paths
+  // ---
+  var inputs = options.inputs || [];
+  var namespaces = options.namespaces;
+  if ((!inputs || 0 === inputs.length) &amp;&amp; !namespaces) {
+    cHelpers.log.error('inputs'.red + ' or ' + 'namespaces'.red +
+      ' properties are required');
+    return false;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var builderDone = this.async();
+var options = this.options();
+
+//
+// Validations
+// - Check required parameters
+//
+if ( !cBuilder.<span class="apidocCodeKeywordSpan">validate</span>( options )) {
+  grunt.log.error( 'FAILED to run closureBuilder task.');
+  return;
+}
+//
+// Prepare and compile the command string we will execute
+//
+// Iterate over all specified file groups.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.builder.validateFileObj" id="apidoc.element.grunt-closure-tools.builder.validateFileObj">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.builder.</span>validateFileObj
+        <span class="apidocSignatureSpan">( options, fileObj )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validateFileObj = function ( options, fileObj ) {
+
+  var root = gruntMod.file.expand(fileObj.src);
+  if (!root || 0 === root.length) {
+    cHelpers.log.error('src'.red + ' property is required');
+    return false;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Iterate over all specified file groups.
+    var commands = [], cmd,
+  targetName = this.target;
+
+    this.files.forEach(function(fileObj) {
+
+
+if ( !cBuilder.<span class="apidocCodeKeywordSpan">validateFileObj</span>( options, fileObj )) {
+  grunt.log.error('FAILED validations for target: ' + targetName.red);
+  return;
+}
+
+cmd = cBuilder.createCommand( options, fileObj );
+
+if ( cmd ) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools.compiler" id="apidoc.module.grunt-closure-tools.compiler">module grunt-closure-tools.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.compiler.compileCommand" id="apidoc.element.grunt-closure-tools.compiler.compileCommand">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>compileCommand
+        <span class="apidocSignatureSpan">( options, fileObj )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compileCommand( options, fileObj ) {
+
+  var cmd = 'java ' +
+    (options.javaFlags ? options.javaFlags.join(' ') : '') +
+    // optional speed optimizations
+    // d32 as found by Igor Minar http://than.pol.as/NfzB
+    (options.d32 ? ' -client -d32 ' : '') +
+    (options.TieredCompilation ? ' -server -XX:+TieredCompilation ' : '') +
+    ' -jar "' + options.compilerFile + '" ';
+
+  //
+  // check for js files
+  //
+  var src = gruntMod.file.expand({nonull: true}, fileObj.src || []);
+  if (src.length &gt; 0) {
+    cmd += helpers.makeParam(src, '--js');
+  }
+
+  //
+  // Process output file
+  //
+  var dest = fileObj.dest;
+  if('string' === typeof(dest)) {
+    dest = gruntMod.template.process(dest);
+  }
+
+  // Check if there are any files to write out. If not, make up an empty command.
+  if (src.length === 0) {
+    helpers.log.warn('Either no src files selected or all filtered out. Writing empty file to ' + dest.cyan);
+    // Command sub object for internal representation of commands that aren't executed in the shell
+    cmd = {
+      type: 'empty',
+      dest: dest
+    };
+    return cmd;
+  }
+  // check if output file is defined
+  if (dest &amp;&amp; dest.length) {
+
+    // create the directories if not there already
+    gruntMod.file.mkdir(path.dirname( dest ));
+
+    // if we want to check the source files timestamps enter this loop.
+    if (options.checkModified &amp;&amp; fs.existsSync( dest )) {
+      var doCompile = false;
+      var outMtime = fs.lstatSync( dest ).mtime;
+
+      for(var i = 0, len = src.length ; i &lt; len ; i++) {
+        if ( fs.lstatSync( src[i] ).mtime &gt; outMtime ) {
+          doCompile = true;
+          break;
+        }
+      }
+      if (!doCompile) {
+        helpers.log.info('Skipping ' + src.blue + ' (Not modified)');
+        return false;
+      }
+    }
+
+    cmd += ' --js_output_file=' + dest;
+  }
+
+  //
+  // start digging on compiler options
+  //
+
+  // FIXME FIXME remove when gruntjs/grunt#738 is resolved
+  // get compiler options
+  var opts = gruntMod.util._.extend({},
+    options.compilerOpts,
+    fileObj.TEMPcompilerOpts);
+
+  for(var directive in opts) {
+
+    // look for 'externs' special case
+    if ('externs' === directive) {
+      opts[directive] = gruntMod.file.expand( opts[directive] );
+    }
+
+    cmd += helpers.makeParam( opts[directive], '--' + directive );
+  }
+
+
+  return cmd;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return;
+  }
+  // for file mappings overwrite the source_map filename with 'dest' name + '.map' suffix
+  if (isMapping &amp;&amp; genSourceMap) {
+    options.compilerOpts.create_source_map = fileObj.dest + '.map';
+  }
+
+  cmd = cCompiler.<span class="apidocCodeKeywordSpan">compileCommand</span>( options, fileObj );
+
+  if ( cmd ) {
+    commands.push( {cmd: cmd, dest: targetName} );
+  } else if (!options.checkModified) {
+    grunt.log.error( 'FAILED to create command line for target: ' + targetName.red );
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.compiler.validateFile" id="apidoc.element.grunt-closure-tools.compiler.validateFile">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>validateFile
+        <span class="apidocSignatureSpan">( fileObj )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateFile( fileObj ) {
+
+  var warningMsg = 'WARNING :: No "src" files were defined';
+  //
+  // Check for js source files
+  //
+  if ( !fileObj.src || 0 === gruntMod.file.expand( fileObj.src )) {
+    helpers.log.warn(warningMsg);
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Iterate over all specified file groups.
+var commands = [], cmd,
+    targetName = this.target;
+
+var isMapping = this.files.length &gt; 1;
+var genSourceMap = (options.compilerOpts &amp;&amp; options.compilerOpts.create_source_map === null);
+this.files.forEach(function(fileObj) {
+  if ( !cCompiler.<span class="apidocCodeKeywordSpan">validateFile</span>( fileObj ) ) {
+    grunt.log.error('closureCompiler Task Failed :: File');
+    return;
+  }
+  // for file mappings overwrite the source_map filename with 'dest' name + '.map' suffix
+  if (isMapping &amp;&amp; genSourceMap) {
+    options.compilerOpts.create_source_map = fileObj.dest + '.map';
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.compiler.validateOpts" id="apidoc.element.grunt-closure-tools.compiler.validateOpts">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.compiler.</span>validateOpts
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate( options ) {
+  // check for closure compiler file
+  var compilerJar = options.compilerFile;
+  //
+  // check compilerJar's existence
+  //
+  if (!gruntMod.file.isFile( compilerJar )) {
+    helpers.log.error('compiler Jar file path not valid: ' + compilerJar.red);
+    return false;
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+module.exports = function( grunt ) {
+  grunt.registerMultiTask('closureCompiler', 'Google Closure Library compiler', function() {
+// Tell grunt this task is asynchronous.
+var compileDone = this.async();
+
+var options = this.options();
+if ( !cCompiler.<span class="apidocCodeKeywordSpan">validateOpts</span>( options ) ) {
+  grunt.log.error('closureCompiler Task Failed :: Options');
+  return;
+}
+
+// Iterate over all specified file groups.
+var commands = [], cmd,
+    targetName = this.target;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools.depsWriter" id="apidoc.module.grunt-closure-tools.depsWriter">module grunt-closure-tools.depsWriter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.depsWriter.createCommand" id="apidoc.element.grunt-closure-tools.depsWriter.createCommand">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.depsWriter.</span>createCommand
+        <span class="apidocSignatureSpan">( options, fileObj )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCommand( options, fileObj ) {
+  // get python binary
+  var pythonBinary = options.pythonBinary || PYTHON_BINARY;
+  var cmd = pythonBinary + ' ';
+
+  // define the depsWriter executable
+  var depsExec = options.depswriter || options.closureLibraryPath + DEPSWRITER;
+  depsExec = gruntMod.template.process( depsExec );
+  cmd += depsExec + ' ';
+  //
+  // Check for root, root_with_prefix and path_with_depspath options
+  //
+  var directives = ['root', 'root_with_prefix', 'path_with_depspath'],
+      directive = directives.shift();
+  while(directive) {
+    // check if the global options has a definition for this
+    // parameter type
+    if ( options.hasOwnProperty(directive) ) {
+      cmd += cHelpers.makeParam( options[directive], '--' + directive + '=', true);
+    }
+
+    // check if the target has a definition for this parameter type
+    if( fileObj.hasOwnProperty( directive ) ) {
+      cmd += cHelpers.makeParam( fileObj[directive], '--' + directive + '=', true);
+    }
+
+    directive = directives.shift();
+  }
+
+  // ---
+  // check if output file is defined
+  // ---
+  var dest = fileObj.dest;
+  if (dest &amp;&amp; dest.length) {
+    gruntMod.file.write(dest, ''); // create the file if it's not there.
+    cmd += ' --output_file=' + gruntMod.template.process(dest);
+  }
+
+  // ---
+  // Check for file targets...
+  // ---
+  var files = gruntMod.file.expand(fileObj.src || {});
+  for (var i = 0, len = files.length; i &lt; len; i++) {
+    cmd += ' ' + files[i];
+  }
+
+  return cmd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+  if ( !cBuilder.validateFileObj( options, fileObj )) {
+    grunt.log.error('FAILED validations for target: ' + targetName.red);
+    return;
+  }
+
+  cmd = cBuilder.<span class="apidocCodeKeywordSpan">createCommand</span>( options, fileObj );
+
+  if ( cmd ) {
+    commands.push( {cmd: cmd, dest: targetName, fileObj: fileObj} );
+  } else {
+    grunt.log.error( 'FAILED to create command line for target: ' + targetName.red );
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.depsWriter.validate" id="apidoc.element.grunt-closure-tools.depsWriter.validate">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.depsWriter.</span>validate
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate( options )
+{
+  // ---
+  // check depsExec existence
+  // ---
+  // check for closure lib path
+  var libPath = options.closureLibraryPath,
+      depsExec;
+  if (!libPath) {
+    // check for direct assignment of depswriter script
+    depsExec = options.depswriter;
+    if (!depsExec) {
+      cHelpers.log.error('One of ' + 'closureLibraryPath'.red + ' or ' + 'depswriter'.red + ' properties are required');
+      return false;
+    }
+  } else {
+    depsExec = libPath + DEPSWRITER;
+  }
+  depsExec = gruntMod.template.process(depsExec);
+  if (!gruntMod.file.isFile( depsExec )) {
+    cHelpers.log.error('depswriter file/path not valid: ' + depsExec.red);
+    return false;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var builderDone = this.async();
+var options = this.options();
+
+//
+// Validations
+// - Check required parameters
+//
+if ( !cBuilder.<span class="apidocCodeKeywordSpan">validate</span>( options )) {
+  grunt.log.error( 'FAILED to run closureBuilder task.');
+  return;
+}
+//
+// Prepare and compile the command string we will execute
+//
+// Iterate over all specified file groups.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools.helpers" id="apidoc.module.grunt-closure-tools.helpers">module grunt-closure-tools.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.executeCommand" id="apidoc.element.grunt-closure-tools.helpers.executeCommand">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>executeCommand
+        <span class="apidocSignatureSpan">( command, done, optSilent, optExecOptions )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function executeCommand( command, done, optSilent, optExecOptions ) {
+  if ( !optSilent ){
+    helpers.log.info('Executing: '.blue +
+      (command.type ? command.type + ' to ' + command.dest.cyan : command));
+  }
+
+  function execCB(err, stdout, stderr) {
+    if ( err ) {
+      helpers.log.error( err );
+      done(false, stderr, stdout);
+      return;
+    }
+
+    if ( !optSilent &amp;&amp; (stdout || stderr)) helpers.log.info(stdout || stderr);
+    done(true, stdout);
+  }
+  // Check if we have an epty write command.
+  if(command.type === 'empty'){
+    grunt.file.write(command.dest, '');
+    execCB(false, '');
+    return;
+  }
+  // Otherwise just execute the command string.
+  if (optExecOptions) {
+    exec(command, optExecOptions, execCB);
+  } else {
+    exec(command, execCB);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.fileExists" id="apidoc.element.grunt-closure-tools.helpers.fileExists">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>fileExists
+        <span class="apidocSignatureSpan">( filePath )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fileExists( filePath ) {
+  try {
+    var stat = fs.lstatSync(filePath);
+    if (stat.isFile() || stat.isSymbolicLink())
+      return true;
+  } catch (ex) {}
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.generateStats" id="apidoc.element.grunt-closure-tools.helpers.generateStats">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>generateStats
+        <span class="apidocSignatureSpan">( filePath, fn )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function genStats( filePath, fn ) {
+  helpers.gzipSize( filePath, function( gzipSize ) {
+    if (!gzipSize) {
+      fn(false);
+      return;
+    }
+    var src = grunt.file.read( filePath ),
+        compiledSize = src.length,
+        percent = String('-' + ((1 - (gzipSize / compiledSize)) * 100).toFixed(2) + '%');
+
+    helpers.log.info('Compiled size:\t' + String((compiledSize / 1024).toFixed(2)).blue +
+      ' kb'.red + ' \t(' + String(compiledSize).blue + ' bytes'.red + ')');
+    helpers.log.info('GZipped size:\t' + String((gzipSize / 1024).toFixed(2)).blue +
+      ' kb'.red + ' \t(' + String(gzipSize).blue + ' bytes'.red + ') ' + percent);
+
+    fn(true);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.getWarn" id="apidoc.element.grunt-closure-tools.helpers.getWarn">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>getWarn
+        <span class="apidocSignatureSpan">( message )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWarn = function ( message ) {
+  var out = '';
+
+  out += '\n\n\n';
+  out += '#################################\n';
+  out += '#################################';
+  out += '\n\n';
+  out += message;
+  out += '\n\n';
+  out += '#################################\n';
+  out += '#################################';
+
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.gzipSize" id="apidoc.element.grunt-closure-tools.helpers.gzipSize">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>gzipSize
+        <span class="apidocSignatureSpan">( file, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gzipSize = function ( file, callback ) {
+
+  gzip(grunt.file.read(file), function(e, result) {
+    if (!e) {
+      callback(result.length);
+    } else {
+      grunt.log.error(e);
+      callback( NaN );
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.makeParam" id="apidoc.element.grunt-closure-tools.helpers.makeParam">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>makeParam
+        <span class="apidocSignatureSpan">(param, directive, optNoSpace, optParsePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeParam(param, directive, optNoSpace, optParsePath) {
+
+  // use space or not after directive
+  var sp = (optNoSpace ? '' : ' ');
+
+  var paramValue = param;
+  if (optParsePath) {
+    paramValue = grunt.file.expand(param);
+  }
+
+  if (Array.isArray(param)) {
+    if (optParsePath){
+      paramValue = [];
+      for(var i = 0, len = param.length; i &lt; len; i++) {
+        paramValue = paramValue.concat(grunt.file.expand(param[i]));
+      }
+    }
+    return ' ' + directive + sp + paramValue.join(' ' + directive + sp);
+  } else if (null === param){
+    return ' ' + directive;
+  } else {
+    return ' ' + directive + sp + String(paramValue);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Bug fixes [1](https://github.com/closureplease/grunt-closure-tools/commit/3f3f8355e020b0591fa57b7656880f51e9ce5129).
+- **v0.8.0**, *28 Mar 2013*
+  - Changed internal API, it's a breaking change the package is required as an npm packaged.
+  - Colors changed in build stats output.
+- **v0.7.7**, *19 Mar 2013*
+  - Removed the compiling time optimization for now, it fails the travis tests.
+- **v0.7.6**, *19 Mar 2013*
+  - helpers.<span class="apidocCodeKeywordSpan">makeParam</span>() - if param is an array, makeParam() should return a flat array
+ after expanding its items with grunt.file.expand and not an array of arrays. By [@centi](https://github.com/centi) [#22](https://
+github.com/closureplease/grunt-closure-tools/pull/22)
+  - Added two options on the compile command to speed up compiling time. Tip from [@igorminar](https://github.com/IgorMinar) on [
+this commit](https://github.com/angular/angular.js/commit/3bd95dbb1a502575ae8250f49190f153442054eb).
+  - Moved repository to the *closureplease* organization.
+
+...read the full [changelog](CHANGELOG.md).
+
+## License
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.runCommands" id="apidoc.element.grunt-closure-tools.helpers.runCommands">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>runCommands
+        <span class="apidocSignatureSpan">( commands, cb, optSilent, optExecOptions )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runCommands( commands, cb, optSilent, optExecOptions ) {
+
+  var commandObj = commands.shift();
+
+  if ( !commandObj ) {
+    // done
+    cb(true);
+    return;
+  }
+
+  helpers.executeCommand( commandObj.cmd , function execCB( state, stderr, stdout ) {
+    if ( state ) {
+      if (!optSilent) helpers.log.info( 'Command complete for target: ' + commandObj.dest );
+    helpers.runCommands( commands, cb, optSilent, optExecOptions);
+    } else {
+      if ( 'string' !== typeof(commandObj.dest)) {
+        commandObj.dest = 'undefined';
+      }
+      helpers.log.error('FAILED to run command for target: ' + commandObj.dest.red);
+      cb(false, stderr, stdout);
+    }
+  }, optSilent, optExecOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return;
+}
+
+//
+// Execute the compile command on the shell.
+//
+//
+cHelpers.<span class="apidocCodeKeywordSpan">runCommands</span>( Array.prototype.slice.call(commands, 0), function(state) {
+  if ( !state ) {
+    builderDone(false);
+    return;
+  }
+  cHelpers.runStats( Array.prototype.slice.call(commands, 0), options, builderDone);
+}, false, options.execOpts);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.runStats" id="apidoc.element.grunt-closure-tools.helpers.runStats">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.</span>runStats
+        <span class="apidocSignatureSpan">( commands, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runStats( commands, options, cb) {
+  var commandObj = commands.shift();
+
+  if ( !commandObj ) {
+    // done
+    cb(true);
+    return;
+  }
+
+  // check if we compiled
+  if ( options.compile ) {
+
+    var dest = commandObj.fileObj.dest;
+    if (dest &amp;&amp; dest.length) {
+      helpers.log.info('File statistics for ' + dest.green);
+      helpers.generateStats( dest , function() {
+        helpers.runStats ( commands, options, cb );
+      });
+    }
+  } else {
+    // nothing todo
+    cb(true);
+  }
+
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    //
+    //
+    cHelpers.runCommands( Array.prototype.slice.call(commands, 0), function(state) {
+      if ( !state ) {
+        builderDone(false);
+        return;
+      }
+      cHelpers.<span class="apidocCodeKeywordSpan">runStats</span>( Array.prototype.slice.call(commands, 0), options, builderDone
+);
+    }, false, options.execOpts);
+
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-closure-tools.helpers.log" id="apidoc.module.grunt-closure-tools.helpers.log">module grunt-closure-tools.helpers.log</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.log.debug" id="apidoc.element.grunt-closure-tools.helpers.log.debug">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>debug
+        <span class="apidocSignatureSpan">(debug, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debug = function (debug, msg) {
+  if ( !debug ) return;
+  localGrunt.log.writeln( 'debug :: '.blue + msg );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.log.error" id="apidoc.element.grunt-closure-tools.helpers.log.error">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) { localGrunt.log.error(msg); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var options = this.options();
+
+//
+// Validations
+// - Check required parameters
+//
+if ( !cBuilder.validate( options )) {
+  grunt.log.<span class="apidocCodeKeywordSpan">error</span>( 'FAILED to run closureBuilder task.');
+  return;
+}
+//
+// Prepare and compile the command string we will execute
+//
+// Iterate over all specified file groups.
+var commands = [], cmd,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.log.info" id="apidoc.element.grunt-closure-tools.helpers.log.info">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>info
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg) { localGrunt.log.writeln(msg); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-closure-tools.helpers.log.warn" id="apidoc.element.grunt-closure-tools.helpers.log.warn">
+        function <span class="apidocSignatureSpan">grunt-closure-tools.helpers.log.</span>warn
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg) { localGrunt.log.warn(msg); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
